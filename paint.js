@@ -1,6 +1,8 @@
 let isBrush = true;
 let isEraser = false;
 
+let isDrawing = false;
+
 let currentColor = "boo";
 let currentTool = null;
 
@@ -8,7 +10,18 @@ let buttons = document.querySelectorAll('.colors');
 let brush = document.querySelector('#brush-icon');
 let eraser = document.querySelector('#eraser-icon');
 let canvasArea = document.querySelector('#canvas');
-let drawTools = document.querySelectorAll('.tools')
+let drawTools = document.querySelectorAll('.tools');
+
+
+brush.addEventListener('click', function () {
+    currentTool = "brush";
+
+})
+
+eraser.addEventListener('click', function () {
+    currentTool = "eraser";
+
+})
 
 for (let button of buttons) {
     button.addEventListener('click', function () {
@@ -26,23 +39,13 @@ for (let tool of drawTools) {
 
 }
 
-let paint = () => {
-
-};
-
-let erase = () => {
-
-};
-
 let selectColor = (button) => {
     for (let button of buttons) {
         button.classList.remove('enlarge-color');
     }
 
-
-    currentColor = button.style.backgroundColor;
+    currentColor = window.getComputedStyle(button).backgroundColor;
     button.classList.add('enlarge-color');
-    console.log(currentColor);
 };
 
 let selectTool = (tool) => {
@@ -53,8 +56,16 @@ let selectTool = (tool) => {
 
     // drawTool = drawTool.style.backgroundColor;
     tool.classList.add('enlarge-tool');
+
     // console.log(currentColor);
 
 };
 
+let paint = () => {
+
+}
+
+let erase = () => {
+
+}
 
