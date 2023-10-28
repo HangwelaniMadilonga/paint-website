@@ -69,11 +69,13 @@ p {
 #brush-icon {
     width: 4rem;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 #eraser-icon {
     width: 4rem;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 
@@ -98,8 +100,14 @@ p {
 
 #color-black {
     background-color: black;
+
 }
 
 #color-yellow {
     background-color: yellow;
+}
+
+.enlarge-color {
+    padding: 3rem;
+    border-radius: 3rem;
 }
