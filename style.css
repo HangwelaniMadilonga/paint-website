@@ -15,6 +15,7 @@ body {
     font-weight: bolder;
     margin-left: 40rem;
     color: azure;
+    margin-top: 2rem;
 }
 
 #options-section {
@@ -42,7 +43,7 @@ p {
 
 #canvas-section {
     width: 60%;
-    padding-bottom: 30rem;
+    padding-bottom: 52rem;
     border-radius: 50px;
     background-color: white;
 }
@@ -52,13 +53,17 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
-    margin-top: 12rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 .colors {
     width: 4rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
 }
 
 #brush-icon {
@@ -68,7 +73,7 @@ p {
 
 #eraser-icon {
     width: 4rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 
@@ -77,4 +82,24 @@ p {
 #colors-heading {
     margin-top: 4rem;
     font-size: 2rem;
+}
+
+#color-blue {
+    background-color: rgb(21, 51, 222);
+}
+
+#color-red {
+    background-color: red;
+}
+
+#color-green {
+    background-color: green;
+}
+
+#color-black {
+    background-color: black;
+}
+
+#color-yellow {
+    background-color: yellow;
 }
