@@ -66,18 +66,12 @@ p {
     cursor: pointer;
 }
 
-#brush-icon {
+
+.tools {
     width: 4rem;
     margin-top: 2rem;
     cursor: pointer;
 }
-
-#eraser-icon {
-    width: 4rem;
-    margin-top: 2rem;
-    cursor: pointer;
-}
-
 
 
 
@@ -110,4 +104,8 @@ p {
 .enlarge-color {
     padding: 3rem;
     border-radius: 3rem;
+}
+
+.enlarge-tool {
+    width: 6rem;
 }
