@@ -2,36 +2,36 @@ let isBrush = true;
 let isEraser = false;
 let isDrawing = false;
 
-let currentColor = "black"; // Default to black. You can change it later.
+let currentColor = "black";
 let currentTool = null;
 
 let buttons = document.querySelectorAll('.colors');
 let brush = document.querySelector('#brush-icon');
 let eraser = document.querySelector('#eraser-icon');
 let canvas = document.querySelector('#canvas-section');
-let ctx = canvas.getContext('2d'); // Get the 2D drawing context
+let ctx = canvas.getContext('2d');
 let drawTools = document.querySelectorAll('.tools');
 
 canvas.addEventListener('mousedown', function () {
     isDrawing = true;
-    draw(event); // Start drawing immediately upon click
+    draw(event);
 });
 
 canvas.addEventListener('mouseup', function () {
     isDrawing = false;
-    ctx.beginPath(); // End the current drawing path
+    ctx.beginPath();
 });
 
 canvas.addEventListener('mousemove', draw);
 
 brush.addEventListener('click', function () {
     currentTool = "brush";
-    ctx.globalCompositeOperation = "source-over"; // Default mode for painting
+    ctx.globalCompositeOperation = "source-over";
 });
 
 eraser.addEventListener('click', function () {
     currentTool = "eraser";
-    ctx.globalCompositeOperation = "destination-out"; // Use this to erase
+    ctx.globalCompositeOperation = "destination-out";
 });
 
 for (let button of buttons) {
@@ -52,7 +52,10 @@ let selectColor = (button) => {
     }
 
     currentColor = window.getComputedStyle(button).backgroundColor;
-    ctx.strokeStyle = currentColor; // Set the stroke color for the canvas
+    ctx.strokeStyle = currentColor;
+    if (currentTool === "brush") {
+        ctx.strokeStyle = white;
+    }
     button.classList.add('enlarge-color');
 };
 
@@ -65,8 +68,8 @@ let selectTool = (tool) => {
 
 function draw(event) {
     if (!isDrawing) return;
-    ctx.lineWidth = 5; // You can change this for a thicker/thinner line
-    ctx.lineCap = "round"; // Makes the line edges round
+    ctx.lineWidth = 5;
+    ctx.lineCap = "round";
 
     ctx.lineTo(event.offsetX, event.offsetY);
     ctx.stroke();
