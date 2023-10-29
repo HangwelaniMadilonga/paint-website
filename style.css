@@ -43,7 +43,7 @@ p {
 
 #canvas-section {
     width: 60%;
-    padding-bottom: 52rem;
+    height: 50rem;
     border-radius: 50px;
     background-color: white;
 }
@@ -108,4 +108,14 @@ p {
 
 .enlarge-tool {
     width: 6rem;
+}
+
+added-element {
+    width: 2000px;
+    height: 20px;
+    background-color: red;
+    border-radius: 100px;
+    position: absolute;
+
+    /* Allow the mouse to pass through the added element */
 }
